@@ -1,17 +1,3 @@
-/*
-
-Define the Time Class:
-
-a. Data Members:
-- minutes: An integer that will store the time in minutes since 12:00 AM.
-
-b. Member Functions:
-- Default constructor Time(): Initializes minutes to 0.
-- readTime(bool & errFlag): Reads the time from cin and updates the minutes data member. Also sets the errFlag based on whether the input was valid or not.
-- subtractTimes(Time t): Subtracts the minutes of t from the current object's minutes and returns the difference.
-
-*/
-
 #include <iostream>
 #include <string>
 #include <cmath>
@@ -88,7 +74,7 @@ int main() {
 
 
     do {
-        cout <<"Enter the start time in the format <HH>:<MM>: " <<endl;
+        cout <<"Enter the start time in the format HH:MM AM/PM (e.g., 12:34 AM)" <<endl;
         startTime.readTime(errFlag);
         if (errFlag) {
             cout << "Invalid time! Please try again!";
@@ -99,7 +85,7 @@ int main() {
     } while (errFlag);
 
     do {
-        cout <<"Enter the stop time in the format <HH>:<MM>: " <<endl;
+        cout <<"Enter the stop time in the format HH:MM AM/PM (e.g., 12:34 AM)" <<endl;
         stopTime.readTime(errFlag);
         if (errFlag) {
             cout << "Invalid time! Please try again!";
